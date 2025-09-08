@@ -33,3 +33,7 @@ export interface CounterProps{
   suffix?:string,
   className?: string,
 }
+
+export interface ProgressTrackerProps {
+  progress: number
+}

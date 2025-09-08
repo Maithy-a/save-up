@@ -10,7 +10,7 @@ export const transactions: Transaction[] = [
 
 export const goal: Goal = {
   title: "Buy a house",
-  target: 250000,
-  current: 182495,
-  deadline: "June 2029",
+  target: 30000,
+  current: 7500,
+  deadline: "June 2026",
 }

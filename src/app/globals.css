@@ -120,7 +120,4 @@
   body {
     @apply bg-background text-foreground;
   }
-  .font-numbers {
-    font-family: var(--font-roboto-mono), monospace;
-  }
 }

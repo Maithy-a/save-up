@@ -1,29 +1,17 @@
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
-import { Roboto_Mono } from "next/font/google"
+import { Inter } from "next/font/google"
 import "./globals.css"
 import { Analytics } from "@vercel/analytics/react"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-})
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-})
-
-const robotoMono = Roboto_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-roboto-mono",
 })
 
 export const metadata: Metadata = {
-  title: "SubApp",
+  title: "Save-up",
   description:
-    "Demo project for handling Paystack payments and subscription flows using Next.js, Supabase, and Tailwind.",
+    "Save-up is a goal-setting and savings app that helps users set financial targets and track their progress, featuring seamless Paystack integration for secure payments and deposits.",
   icons: {
     icon: "/images/geopandas.png",
   },
@@ -37,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${robotoMono.variable} antialiased`}
+        className={`${inter.variable} antialiased`}
       >
         {children}
         <Analytics />
