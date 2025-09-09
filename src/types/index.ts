@@ -1,5 +1,9 @@
 export type TransactionType = "deposit" | "interest"
 
+export type AuthFormProps = {
+  mode:"signin" |"signup"
+}
+
 export interface Transaction {
   id: string
   type: TransactionType
@@ -14,7 +18,6 @@ export interface Goal {
   current: number
   deadline: string
 }
-
 export interface TransactionItemProps {
   transaction: Transaction
 }
