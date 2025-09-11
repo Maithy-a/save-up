@@ -1,17 +1,23 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Epilogue, DM_Sans } from "next/font/google"
 import "./globals.css"
 import { Analytics } from "@vercel/analytics/react"
 
-const inter = Inter({
-  variable: "--font-inter",
+
+const epilogue = Epilogue({
+  variable: "--font-epilogue",
+  subsets: ["latin"],
+})
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
 })
 
 export const metadata: Metadata = {
-  title: "Save-up",
+  title: "Targetly",
   description:
-    "Save-up is a goal-setting and savings app that helps users set financial targets and track their progress, featuring seamless Paystack integration for secure payments and deposits.",
+    "Targetly is a goal-setting and savings app that helps users set financial targets and track their progress, featuring seamless Paystack integration for secure payments and deposits.",
   icons: {
     icon: "/images/geopandas.png",
   },
@@ -25,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${epilogue.variable} ${dmSans.variable} antialiased`}
       >
         {children}
         <Analytics />
